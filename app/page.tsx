@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {ArrowRight} from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,17 +17,21 @@ export default function Home() {
                 A Better way to track your job application.
                 </h1>
               {/* add the color palette , it is just a way where you can edit tailwind classes */}
-              <p className="text-gray-700 mb-10 text-xl">
+              <p className="text-muted-foreground mb-8 text-xl">
                 Capture , organize and manage your job search in one place.
                 </p>
                 <div className="flex flex-col items-center gap-4">
-                  {/* now here we have a button we can make a componente and reuse multiple time as usual but i will use shadcn  to install custom made components it will be created in components folder , run npx i shadcn@latest add button and then import it */}
+                  {/* now here we have a button we can make a component and reuse multiple time as usual but i will use shadcn  to install custom made components it will be created in components folder , run npx i shadcn@latest add button and then import it */}
+                  <Link href="/sign-up">
                <Button size="lg" className="h-12 px-8 text-lg font-medium " >
                 Start for free
                 {/* i want to install icon library , run npm i lucide-react */}
                 <ArrowRight className="ml-2 " />
                 </Button>
-               <p>Free forever , no credit card required.</p>
+                </Link>
+               <p className="text-sm text-muted-foreground">
+                Free forever , no credit card required.
+               </p>
                </div>
             </div>
 
